@@ -93,200 +93,447 @@
                 Otro
             </label>
         </div>
-        <div class="form-group">
-            <label id="email-label" for="email">Email</label>
-            <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    class="form-control"
-                    placeholder="Enter your Email"
-                    required
-            />
-        </div>
-        <div class="form-group">
-            <label id="number-label" for="number"
-            >Age<span class="clue">(optional)</span></label
-            >
-            <input
-                    type="number"
-                    name="age"
-                    id="number"
-                    min="10"
-                    max="99"
-                    class="form-control"
-                    placeholder="Age"
-            />
-        </div>
-        <div class="form-group">
-            <p>Which option best describes your current role?</p>
-            <select id="dropdown" name="role" class="form-control" required>
-                <option disabled selected value>Select current role</option>
-                <option value="student">Student</option>
-                <option value="job">Full Time Job</option>
-                <option value="learner">Full Time Learner</option>
-                <option value="preferNo">Prefer not to say</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
+
+        <label id="name-label" for="name" class="ask">De los siguientes temas<br>
+            <span class="clue">Evalúe de 1 a 7 cómo los califica usted de acuerdo al grado de satisfacción:</span>
+        </label>
 
         <div class="form-group">
-            <p>Would you recommend freeCodeCamp to a friend?</p>
-            <label>
-                <input
-                        name="user-recommend"
-                        value="definitely"
-                        type="radio"
-                        class="input-radio"
-                        checked
-                />Definitely</label
-            >
-            <label>
-                <input
-                        name="user-recommend"
-                        value="maybe"
-                        type="radio"
-                        class="input-radio"
-                />Maybe</label
-            >
-
-            <label
-            ><input
-                    name="user-recommend"
-                    value="not-sure"
-                    type="radio"
-                    class="input-radio"
-            />Not sure</label
-            >
+            <label id="pensiones-label" for="pensiones">Pensiones (AFP)</label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="pensiones-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
         </div>
-
         <div class="form-group">
-            <p>
-                What is your favorite feature of freeCodeCamp?
-            </p>
-            <select id="most-like" name="mostLike" class="form-control" required>
-                <option disabled selected value>Select an option</option>
-                <option value="challenges">Challenges</option>
-                <option value="projects">Projects</option>
-                <option value="community">Community</option>
-                <option value="openSource">Open Source</option>
-            </select>
+            <label id="impuesto-label" for="impuesto">
+                Impuesto a la Renta
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="impuesto-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
         </div>
-
         <div class="form-group">
-            <p>
-                What would you like to see improved?
-                <span class="clue">(Check all that apply)</span>
-            </p>
-
-            <label
-            ><input
-                    name="prefer"
-                    value="front-end-projects"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Front-end Projects</label
-            >
-            <label>
-                <input
-                        name="prefer"
-                        value="back-end-projects"
-                        type="checkbox"
-                        class="input-checkbox"
-                />Back-end Projects</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="data-visualization"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Data Visualization</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="challenges"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Challenges</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="open-source-community"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Open Source Community</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="gitter-help-rooms"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Gitter help rooms</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="videos"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Videos</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="city-meetups"
-                    type="checkbox"
-                    class="input-checkbox"
-            />City Meetups</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="wiki"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Wiki</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="forum"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Forum</label
-            >
-            <label
-            ><input
-                    name="prefer"
-                    value="additional-courses"
-                    type="checkbox"
-                    class="input-checkbox"
-            />Additional Courses</label
-            >
+            <label id="sueldos-label" for="sueldos">
+                Sueldos
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="sueldos-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
         </div>
-
         <div class="form-group">
-            <p>Any comments or suggestions?</p>
+            <label id="servicios-label" for="servicios">
+                Servicios Básicos (Agua, Electricidad, Gas)
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="servicios-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label id="educacion-label" for="educacion">
+                Educación
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="educacion-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label id="transporte-label" for="transporte">
+                Transporte
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="transporte-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label id="transporte-label" for="transporte">
+                Transporte
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="transporte-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label id="salud-label" for="salud">
+                Salud
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="salud-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label id="salud-label" for="salud">
+                Salud
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="salud-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label id="seguridad-label" for="seguridad">
+                Seguridad y Delincuencia
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="seguridad-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+            <p>Otros</p>
             <textarea
-                    id="comments"
+                    id="otros-1"
                     class="input-textarea"
-                    name="comment"
-                    placeholder="Enter your comment here..."
+                    name="otros-1"
+                    placeholder="Escriba su comentario aquí..."
             ></textarea>
         </div>
 
         <div class="form-group">
+            <p>
+                ¿Cuál es el tema más relevante que debe solucionar Chile?
+            </p>
+            <label><input
+                    name="pensiones-checkbox"
+                    value="Pensiones (AFP)"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Pensiones (AFP)
+            </label>
+            <label><input
+                name="impuestos-checkbox"
+                value="impuestos"
+                type="checkbox"
+                class="input-checkbox"/>
+                Impuesto a la Renta
+            </label>
+            <label><input
+                name="sueldos-checkbox"
+                value="sueldos"
+                type="checkbox"
+                class="input-checkbox"/>
+                Sueldos
+            </label>
+            <label><input
+                name="servicios-checkbox"
+                value="servicios"
+                type="checkbox"
+                class="input-checkbox"/>
+                Servicios Básicos (Agua, Electricidad, Gas)
+            </label>
+            <label><input
+                name="educacion-checkbox"
+                value="educacion"
+                type="checkbox"
+                class="input-checkbox"/>
+                Educación
+            </label>
+            <label><input
+                name="transporte-checkbox"
+                value="transporte"
+                type="checkbox"
+                class="input-checkbox"/>
+                Transporte
+            </label>
+            <label><input
+                name="salud-checkbox"
+                value="salud"
+                type="checkbox"
+                class="input-checkbox"/>
+                Salud
+            </label>
+            <label><input
+                name="seguridad-checkbox"
+                value="seguridad"
+                type="checkbox"
+                class="input-checkbox"/>
+                Seguridad y Delincuencia
+            </label>
+            <p>Otro</p>
+            <textarea
+                    id="otro-2"
+                    class="input-textarea"
+                    name="otro-2"
+                    placeholder="Escriba su comentario aquí..."
+            ></textarea>
+        </div>
+
+        <div class="form-group">
+            <p>
+                ¿Quién cree que es el responsable de la situación actual del país?
+            </p>
+
+            <label>
+                <input
+                    name="presidente"
+                    value="Presidente y su gabinete"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Presidente y su gabinete
+            </label>
+            <label>
+                <input
+                    name="grupos-extremistas"
+                    value="Grupos extremistas"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Grupos extremistas
+            </label>
+            <label>
+                <input
+                    name="situacion-economica-internacional"
+                    value="Situación económica internacional"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Situación económica internacional
+            </label>
+            <label>
+                <input
+                    name="alza-precios-servicios"
+                    value="Alza de precios de servicios"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Alza de precios de servicios
+            </label>
+            <label>
+                <input
+                    name="clase-politica"
+                    value="Clase Política"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Clase Política
+            </label>
+            <label>
+                <input
+                    name="empresarios"
+                    value="Empresarios"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Empresarios
+            </label>
+            <label>
+                <input
+                    name="empresas-publicas"
+                    value="Empresas Públicas"
+                    type="checkbox"
+                    class="input-checkbox"/>
+                Empresas Públicas
+            </label>
+            <p>Otro</p>
+            <textarea
+                    id="otro-2"
+                    class="input-textarea"
+                    name="otro-2"
+                    placeholder="Escriba su comentario aquí..."
+            ></textarea>
+        </div>
+
+        <div class="form-group">
+            <h2>Manifestaciones</h2>
+            <p>¿Estás de acuerdo con la manifestación social que vive Chile?</p>
+            <p>
+                Sí 
+                <input type="radio" name="manifestaciones-1" value="si">
+            </p>
+            <p>
+                No 
+                <input type="radio" name="manifestaciones-1" value="no">
+            </p>
+            <p>
+                Indiferente 
+                <input type="radio" name="manifestaciones-1" value="indiferente">
+            </p>
+            <p>¿Considera la evasión como un método legítimo para protestar?</p>
+            <p>
+                Sí 
+                <input type="radio" name="manifestaciones-2" value="si">
+            </p>
+            <p>
+                No 
+                <input type="radio" name="manifestaciones-2" value="no">
+            </p>
+            <p>
+                Indiferente 
+                <input type="radio" name="manifestaciones-2" value="indiferente">
+            </p>
+            <p>¿Considera la violencia como un método legítimo para protestar?</p>
+            <p>
+                Sí 
+                <input type="radio" name="manifestaciones-2" value="si">
+            </p>
+            <p>
+                No 
+                <input type="radio" name="manifestaciones-2" value="no">
+            </p>
+            <p>
+                Indiferente 
+                <input type="radio" name="manifestaciones-2" value="indiferente">
+            </p>
+        </div>
+
+        <div class="form-group">
+            <h2>Segmentación</h2>
+            <p>Región <select id="regiones"></select></p>
+            <p>Comuna <select id="comunas"></select></p>
+        </div>
+        <div class="form-group">
+            <p>Genero</p>
+            <p>
+                Hombre
+                <input type="radio" name="genero" value="Hombre">
+            </p>
+            <p>
+                Mujer
+                <input type="radio" name="genero" value="Mujer">
+            </p>
+        </div>
+        <div class="form-group">
+            <p>Edad</p>
+            <input type="number" name="edad" min="1" max="100">
+        </div>
+
+        <div class="form-group">
+            <h2>Evaluación (donde 1 es peor y 7 mejor)</h2>
+
+            <label id="eval-1-label" for="eval-1">
+                ¿Cómo evalúa el actuar de la población civil en las protestas?
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="eval-1-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+
+            <label id="eval-2-label" for="eval-2">
+                ¿Cómo evalúa el actuar de carabineros en las protestas?
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="eval-2-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+
+            <label id="eval-3-label" for="eval-3">
+                ¿Cómo evalúa el actuar del ejército en las protestas?
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="eval-3-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+
+            <label id="eval-4-label" for="eval-4">
+                ¿Cómo evalúa el actuar de los medios en las protestas?
+            </label>
+            <input type="range" min="1" max="7" value="1" class="slider" id="eval-4-range">
+            <ul class="range">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <p>Describe qué proyecto o iniciativa se debe llevar a cabo:</p>
+            <textarea
+                    id="otros-3"
+                    class="input-textarea"
+                    name="otros-3"
+                    placeholder="Escriba su comentario aquí...">
+            </textarea>
+        </div>
+
+        <div class="form-group">
             <button type="submit" id="submit" class="submit-button">
-                Submit
+                Enviar
             </button>
         </div>
     </form>
 </div>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/survey.js"></script>
 </body>
 </html>
