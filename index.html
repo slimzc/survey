@@ -106,7 +106,8 @@
 
         <div class="form-group">
             <label id="pensiones-label" for="pensiones">Pensiones (AFP)</label>
-            <input type="range" min="1" max="7" value="1" class="slider" name="according-degree-satisfaction-afp-pensions" id="pensiones-range">
+            <input type="range" min="1" max="7" value="1" class="slider" 
+            name="according-degree-satisfaction-afp-pensions" id="pensiones-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -242,7 +243,7 @@
                 ¿Cuál es el tema más relevante que debe solucionar Chile?
             </p>
             <label><input
-                    name="most-relevant-topic"
+                    name="relevant-topic"
                     value="Pensiones (AFP)"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -321,7 +322,7 @@
             </label>
             <label>
                 <input
-                    name="grupos-extremistas"
+                    name="responsible-current-situation"
                     value="Grupos extremistas"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -421,8 +422,8 @@
 
         <div class="form-group">
             <h2>Segmentación</h2>
-            <p>Región <select id="regiones"></select></p>
-            <p>Comuna <select id="comunas"></select></p>
+            <p>Región <select name="regiones" id="regiones"></select></p>
+            <p>Comuna <select name="comunas" id="comunas"></select></p>
         </div>
         <div class="form-group">
             <p>Genero</p>
