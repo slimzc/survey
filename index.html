@@ -106,7 +106,7 @@
 
         <div class="form-group">
             <label id="pensiones-label" for="pensiones">Pensiones (AFP)</label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="pensiones-range">
+            <input type="range" min="1" max="7" value="1" class="slider" name="according-degree-satisfaction-afp-pensions" id="pensiones-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -121,7 +121,8 @@
             <label id="impuesto-label" for="impuesto">
                 Impuesto a la Renta
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="impuesto-range">
+            <input type="range" min="1" max="7" value="1" class="slider" 
+            name="according-degree-satisfaction-income-tax" id="impuesto-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -136,7 +137,8 @@
             <label id="sueldos-label" for="sueldos">
                 Sueldos
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="sueldos-range">
+            <input type="range" min="1" max="7" value="1" class="slider"
+            name="according-degree-satisfaction-salaries" id="sueldos-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -151,7 +153,8 @@
             <label id="servicios-label" for="servicios">
                 Servicios Básicos (Agua, Electricidad, Gas)
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="servicios-range">
+            <input type="range" min="1" max="7" value="1" class="slider"
+            name="according-degree-satisfaction-basic-services" id="servicios-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -166,7 +169,8 @@
             <label id="educacion-label" for="educacion">
                 Educación
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="educacion-range">
+            <input type="range" min="1" max="7" value="1" class="slider" 
+            name="according-degree-satisfaction-education" id="educacion-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -181,22 +185,8 @@
             <label id="transporte-label" for="transporte">
                 Transporte
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="transporte-range">
-            <ul class="range">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-            </ul>
-        </div>
-        <div class="form-group">
-            <label id="transporte-label" for="transporte">
-                Transporte
-            </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="transporte-range">
+            <input type="range" min="1" max="7" value="1" class="slider" 
+            name="according-degree-satisfaction-transport" id="transporte-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -211,22 +201,8 @@
             <label id="salud-label" for="salud">
                 Salud
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="salud-range">
-            <ul class="range">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-            </ul>
-        </div>
-        <div class="form-group">
-            <label id="salud-label" for="salud">
-                Salud
-            </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="salud-range">
+            <input type="range" min="1" max="7" value="1" class="slider" 
+            name="according-degree-satisfaction-health" id="salud-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -241,7 +217,8 @@
             <label id="seguridad-label" for="seguridad">
                 Seguridad y Delincuencia
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="seguridad-range">
+            <input type="range" min="1" max="7" value="1" class="slider" 
+            name="according-degree-satisfaction-security-crime" id="seguridad-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -255,7 +232,7 @@
             <textarea
                     id="otros-1"
                     class="input-textarea"
-                    name="otros-1"
+                    name="according-degree-satisfaction-others"
                     placeholder="Escriba su comentario aquí..."
             ></textarea>
         </div>
@@ -265,66 +242,66 @@
                 ¿Cuál es el tema más relevante que debe solucionar Chile?
             </p>
             <label><input
-                    name="pensiones-checkbox"
+                    name="most-relevant-topic"
                     value="Pensiones (AFP)"
                     type="checkbox"
                     class="input-checkbox"/>
                 Pensiones (AFP)
             </label>
             <label><input
-                name="impuestos-checkbox"
+                name="relevant-topic"
                 value="impuestos"
                 type="checkbox"
                 class="input-checkbox"/>
                 Impuesto a la Renta
             </label>
             <label><input
-                name="sueldos-checkbox"
+                name="relevant-topic"
                 value="sueldos"
                 type="checkbox"
                 class="input-checkbox"/>
                 Sueldos
             </label>
             <label><input
-                name="servicios-checkbox"
+                name="relevant-topic"
                 value="servicios"
                 type="checkbox"
                 class="input-checkbox"/>
                 Servicios Básicos (Agua, Electricidad, Gas)
             </label>
             <label><input
-                name="educacion-checkbox"
+                name="relevant-topic"
                 value="educacion"
                 type="checkbox"
                 class="input-checkbox"/>
                 Educación
             </label>
             <label><input
-                name="transporte-checkbox"
+                name="relevant-topic"
                 value="transporte"
                 type="checkbox"
                 class="input-checkbox"/>
                 Transporte
             </label>
             <label><input
-                name="salud-checkbox"
+                name="relevant-topic"
                 value="salud"
                 type="checkbox"
                 class="input-checkbox"/>
                 Salud
             </label>
             <label><input
-                name="seguridad-checkbox"
+                name="relevant-topic"
                 value="seguridad"
                 type="checkbox"
                 class="input-checkbox"/>
                 Seguridad y Delincuencia
             </label>
-            <p>Otro</p>
+            <p>Otros</p>
             <textarea
                     id="otro-2"
                     class="input-textarea"
-                    name="otro-2"
+                    name="relevant-topic"
                     placeholder="Escriba su comentario aquí..."
             ></textarea>
         </div>
@@ -336,7 +313,7 @@
 
             <label>
                 <input
-                    name="presidente"
+                    name="responsible-current-situation"
                     value="Presidente y su gabinete"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -352,7 +329,7 @@
             </label>
             <label>
                 <input
-                    name="situacion-economica-internacional"
+                    name="responsible-current-situation"
                     value="Situación económica internacional"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -360,7 +337,7 @@
             </label>
             <label>
                 <input
-                    name="alza-precios-servicios"
+                    name="responsible-current-situation"
                     value="Alza de precios de servicios"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -368,7 +345,7 @@
             </label>
             <label>
                 <input
-                    name="clase-politica"
+                    name="responsible-current-situation"
                     value="Clase Política"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -376,7 +353,7 @@
             </label>
             <label>
                 <input
-                    name="empresarios"
+                    name="responsible-current-situation"
                     value="Empresarios"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -384,7 +361,7 @@
             </label>
             <label>
                 <input
-                    name="empresas-publicas"
+                    name="responsible-current-situation"
                     value="Empresas Públicas"
                     type="checkbox"
                     class="input-checkbox"/>
@@ -394,7 +371,7 @@
             <textarea
                     id="otro-2"
                     class="input-textarea"
-                    name="otro-2"
+                    name="responsible-current-situation"
                     placeholder="Escriba su comentario aquí..."
             ></textarea>
         </div>
@@ -404,41 +381,41 @@
             <p>¿Estás de acuerdo con la manifestación social que vive Chile?</p>
             <p>
                 Sí 
-                <input type="radio" name="manifestaciones-1" value="si">
+                <input type="radio" name="social-manifestation" value="si">
             </p>
             <p>
                 No 
-                <input type="radio" name="manifestaciones-1" value="no">
+                <input type="radio" name="social-manifestation" value="no">
             </p>
             <p>
                 Indiferente 
-                <input type="radio" name="manifestaciones-1" value="indiferente">
+                <input type="radio" name="social-manifestation" value="indiferente">
             </p>
             <p>¿Considera la evasión como un método legítimo para protestar?</p>
             <p>
                 Sí 
-                <input type="radio" name="manifestaciones-2" value="si">
+                <input type="radio" name="evasion-legitimate-method" value="si">
             </p>
             <p>
                 No 
-                <input type="radio" name="manifestaciones-2" value="no">
+                <input type="radio" name="evasion-legitimate-method" value="no">
             </p>
             <p>
                 Indiferente 
-                <input type="radio" name="manifestaciones-2" value="indiferente">
+                <input type="radio" name="evasion-legitimate-method" value="indiferente">
             </p>
             <p>¿Considera la violencia como un método legítimo para protestar?</p>
             <p>
                 Sí 
-                <input type="radio" name="manifestaciones-2" value="si">
+                <input type="radio" name="violence-legitimate-method" value="si">
             </p>
             <p>
                 No 
-                <input type="radio" name="manifestaciones-2" value="no">
+                <input type="radio" name="violence-legitimate-method" value="no">
             </p>
             <p>
                 Indiferente 
-                <input type="radio" name="manifestaciones-2" value="indiferente">
+                <input type="radio" name="violence-legitimate-method" value="indiferente">
             </p>
         </div>
 
@@ -451,16 +428,16 @@
             <p>Genero</p>
             <p>
                 Hombre
-                <input type="radio" name="genero" value="Hombre">
+                <input type="radio" name="gender" value="Hombre">
             </p>
             <p>
                 Mujer
-                <input type="radio" name="genero" value="Mujer">
+                <input type="radio" name="gender" value="Mujer">
             </p>
         </div>
         <div class="form-group">
             <p>Edad</p>
-            <input type="number" name="edad" min="1" max="100">
+            <input type="number" name="age" min="1" max="100">
         </div>
 
         <div class="form-group">
@@ -469,7 +446,8 @@
             <label id="eval-1-label" for="eval-1">
                 ¿Cómo evalúa el actuar de la población civil en las protestas?
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="eval-1-range">
+            <input type="range" min="1" max="7" value="1" class="slider"
+            name="civil-population-assessment" id="eval-1-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -483,7 +461,8 @@
             <label id="eval-2-label" for="eval-2">
                 ¿Cómo evalúa el actuar de carabineros en las protestas?
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="eval-2-range">
+            <input type="range" min="1" max="7" value="1" class="slider"
+            name="carabineros-evaluation" id="eval-2-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -497,7 +476,8 @@
             <label id="eval-3-label" for="eval-3">
                 ¿Cómo evalúa el actuar del ejército en las protestas?
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="eval-3-range">
+            <input type="range" min="1" max="7" value="1" class="slider"
+            name="army-evaluation" id="eval-3-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -511,7 +491,8 @@
             <label id="eval-4-label" for="eval-4">
                 ¿Cómo evalúa el actuar de los medios en las protestas?
             </label>
-            <input type="range" min="1" max="7" value="1" class="slider" id="eval-4-range">
+            <input type="range" min="1" max="7" value="1" class="slider"
+            name="media-evaluation" id="eval-4-range">
             <ul class="range">
                 <li>1</li>
                 <li>2</li>
@@ -527,7 +508,7 @@
             <textarea
                     id="otros-3"
                     class="input-textarea"
-                    name="otros-3"
+                    name="project-or-initiative"
                     placeholder="Escriba su comentario aquí...">
             </textarea>
         </div>
