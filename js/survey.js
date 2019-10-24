@@ -107,3 +107,57 @@ jQuery(document).ready(function () {
 	});
 
 });
+(function surveyScopeWrapper($) {
+
+	// Register click handler for #request button
+	$(function onDocReady() {
+		$('#submit').click(handleRequestClick);
+
+	});
+
+	function handleRequestClick(event) {
+		event.preventDefault();
+		requestSurvey();
+	}
+
+	function getFormData($form){
+		var unindexed_array = $form.serializeArray();
+		var indexed_array = {};
+
+		$.map(unindexed_array, function(n, i){
+			if(n['name'] in indexed_array)
+				indexed_array[n['name']] = indexed_array[n['name']].concat(',',n['value']);
+			else
+				indexed_array[n['name']] = n['value'];
+		});
+
+		return indexed_array;
+	}
+
+	function requestSurvey(pickupLocation) {
+		form = $( ':input' );
+		surveyData = getFormData(form);
+		surveyformatted = {}
+
+
+
+		console.log(surveyData);
+		$.ajax({
+			method: 'POST',
+			url: _config.api.invokeUrl + '/',
+			data: JSON.stringify(surveyData),
+			contentType: 'application/json',
+			success: completeRequest,
+			error: function ajaxError(jqXHR, textStatus, errorThrown) {
+				console.error('Error requesting ride: ', textStatus, ', Details: ', errorThrown);
+				console.error('Response: ', jqXHR.responseText);
+				alert('Ocurrió un error repentino:\n' + jqXHR.responseText);
+			}
+		});
+	}
+
+	function completeRequest(result) {
+		alert('Encuesta completada. Gracias!');
+	}
+
+}(jQuery));
