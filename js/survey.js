@@ -1,4 +1,4 @@
-var RegionesYcomunas = {
+const RegionesYcomunas = {
 
 	"regiones": [{
 			"NombreRegion": "Arica y Parinacota",
@@ -140,16 +140,18 @@ jQuery(document).ready(function () {
 		surveyformatted = {}
 
 
+		$.support.cors = true;
 
 		console.log(surveyData);
 		$.ajax({
 			method: 'POST',
-			url: _config.api.invokeUrl + '/',
+			url: _config.api.invokeUrl + '/survey',
 			data: JSON.stringify(surveyData),
 			contentType: 'application/json',
+			headers: { "X-Amz-Date": "" },
 			success: completeRequest,
 			error: function ajaxError(jqXHR, textStatus, errorThrown) {
-				console.error('Error requesting ride: ', textStatus, ', Details: ', errorThrown);
+				console.error('Error requesting survey: ', textStatus, ', Details: ', errorThrown);
 				console.error('Response: ', jqXHR.responseText);
 				alert('Ocurrió un error repentino:\n' + jqXHR.responseText);
 			}
