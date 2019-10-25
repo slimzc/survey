@@ -4,20 +4,21 @@ const ddb = new AWS.DynamoDB.DocumentClient();
 exports.handler = (event, context, callback) => {
 
     const requestBody = JSON.parse(event.body);
-    const survey = requestBody.survey;
+    const survey = requestBody;
 
     recordRide(survey).then(() => {
         callback(null, {
-        statusCode: 201,
+            statusCode: 201,
             body: survey,
             headers: {
-            'Access-Control-Allow-Origin': '*', //TODO: Validate if this CORS is necessary
+                'Access-Control-Allow-Origin': '*',
+                "Access-Control-Allow-Credentials" : true
             },
-    });
-}).catch((err) => {
+        });
+    }).catch((err) => {
         console.error(err);
-    errorResponse(err.message, context.awsRequestId, callback)
-});
+        errorResponse(err.message, context.awsRequestId, callback)
+    });
 };
 //TODO: Complete thus item with the survey values :)
 function recordRide(survey) {
@@ -46,7 +47,8 @@ function recordRide(survey) {
             evaluacion_carabineros: survey.carabineros-evaluation,
             evaluacion_ejercito: survey.army-evaluation,
             evaluacion_medios: survey.media-evaluation,
-            iniciativa: survey.project-or-initiative
+            iniciativa: survey.project-or-initiative,
+
         },
     }).promise();
 }
@@ -59,7 +61,9 @@ function errorResponse(errorMessage, awsRequestId, callback) {
             Reference: awsRequestId,
         }),
         headers: {
-            'Access-Control-Allow-Origin': '*',//TODO: Validate if this CORS is necessary
+            'Access-Control-Allow-Origin': '*',
+            "Access-Control-Allow-Credentials" : true
+
         },
     });
 }
